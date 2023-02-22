@@ -67,6 +67,24 @@ async function loadEager(doc) {
   }
 }
 
+
+async function playSlideshow(document) {
+  var slides = document.querySelectorAll('#slides .slide');
+  var currentSlide = 0;
+  
+  function goToSlide(n){
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n+slides.length)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+  }
+  
+  function nextSlide(){
+    goToSlide(currentSlide+1);
+  }
+
+  var slideInterval = setInterval(nextSlide,2000);
+}
+
 /**
  * Adds the favicon.
  * @param {string} href The favicon URL
@@ -115,10 +133,17 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+
+
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  playSlideshow(document);
 }
 
 loadPage();
+
+
+
+

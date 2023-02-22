@@ -1,4 +1,28 @@
 /* header and nav layout */
+header {
+  height: auto;
+}
+
+header .header {
+  position: fixed;
+    /* top: 0; */
+    z-index: 12;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 40px;
+    /* color: #ffffff; */
+    border-color: #ffffff;
+    box-sizing: border-box;
+    -webkit-transition: background-color 300ms ease, color 260ms ease, padding 180ms ease;
+    -moz-transition: background-color 300ms ease, color 260ms ease, padding 180ms ease;
+    -ms-transition: background-color 300ms ease, color 260ms ease, padding 180ms ease;
+    transition: background-color 300ms ease, color 260ms ease, padding 180ms ease;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    left: 500px;
+}
+}
+
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -145,6 +169,7 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  display: none;
 }
 
 header nav .nav-brand img {
@@ -159,6 +184,7 @@ header nav .nav-sections {
   display: none;
   visibility: hidden;
   background-color: var(--overlay-color);
+  opacity: .9;
 }
 
 header nav[aria-expanded=true] .nav-sections {
@@ -172,6 +198,7 @@ header nav .nav-sections ul  {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  color: #ffffff
 }
 
 header nav .nav-sections ul > li {
@@ -180,6 +207,7 @@ header nav .nav-sections ul > li {
 
 header nav .nav-sections ul > li > ul {
   margin-top: 0;
+  color: #000
 }
 
 header nav .nav-sections ul > li > ul > li {
@@ -241,14 +269,24 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
   }
 
+  header nav .nav-sections ul > li:hover > ul {
+    display: block;
+    position: absolute;
+    left: -1em;
+    width: 200px;
+    padding: 0;
+    background-color: #ffffff;
+    white-space: initial;
+   }
+
   header nav .nav-sections > ul > li[aria-expanded=true] > ul {
     display: block;
     position: absolute;
     left: -1em;
     width: 200px;
     margin-top: 12px;
-    padding: 1em;
-    background-color: var(--highlight-background-color);
+    padding: 0;
+    background-color: #ffffff;
     white-space: initial;
   }
 
@@ -264,12 +302,40 @@ header nav .nav-sections ul > li > ul > li {
     border-bottom: 8px solid var(--highlight-background-color);
   }
 
-  header nav .nav-sections > ul > li > ul > li {
-    padding: 8px 0;
+  header nav .nav-sections > ul > li > ul > li,
+  header nav .nav-sections > ul > li > ul > li > ul > li {
+    padding: 8px 10px;
   }
 }
 
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-sections ul > li > ul > li {
+  position: relative;
+}
+
+header nav .nav-sections ul > li > ul > li > ul {
+  display:none;
+}
+
+header nav .nav-sections ul > li > ul > li:hover {
+  background: #dedddd;
+}
+
+header nav .nav-sections ul > li > ul > li:hover > ul {
+  display: block;
+  position: absolute;
+  left: 190px;
+  top: 0px;
+  background: #ffffff;
+  margin-left: 10px;
+}
+
+header nav .nav-sections ul > li > ul > li > ul > li {
+  margin: 0;
+  width: 200px;
+  text-align: left;
 }

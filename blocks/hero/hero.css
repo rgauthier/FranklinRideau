@@ -11,14 +11,25 @@ main .hero-container {
 main .hero {
     position: relative;
     padding: 32px;
-    min-height: 300px;
+    min-height: 500px;
 }
 
 main .hero h1 {
-    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     color: white;
+    background-color: #4e1a88;
+    bottom: -105px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 45px;
+    padding-left: 150px;
 }
 
 

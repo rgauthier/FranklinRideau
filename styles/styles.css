@@ -163,7 +163,7 @@ main input:hover {
 }
 
 main .section {
-  padding: 64px 16px;
+  padding: 0;
 }
 
 main pre {
@@ -206,7 +206,7 @@ main img {
 
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 0;
   }  
 }
 
@@ -234,4 +234,19 @@ main .section[data-section-status='initialized'] {
 
 main .section.highlight {
   background-color: var(--highlight-background-color);
+}
+
+.default-content-wrapper {
+  padding-top: 460px;
+  background-color: #4e1a88;
+  color: #fff;
+  width: 100% !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+.default-content-wrapper h2 {
+  max-width: 1200px;
+  padding-bottom: 20px;
+  margin: auto;
 }

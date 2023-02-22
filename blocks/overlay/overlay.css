@@ -1,0 +1,14 @@
+main .overlay {
+  /*  position: relative;
+    top: 200px; */
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    display: grid;
+    z-index: 1000;
+}
+
+/*main .overlay a{
+    position: absolute;
+    right:0;
+}*/
