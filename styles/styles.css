@@ -21,7 +21,7 @@
 
   /* fonts */
   --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: var(--body-font-family);
+  --heading-font-family: 'Montserrat', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -237,7 +237,7 @@ main .section.highlight {
 }
 
 .default-content-wrapper {
-  padding-top: 380px;
+  padding-top: 370px;
   background-color: #4e1a88;
   color: #fff;
   width: 100% !important;
