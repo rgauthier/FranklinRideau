@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 16px;
+    margin-top: 50px;
 }
 
 .cards > ul > li {
@@ -29,3 +30,8 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
+
+.cards-card-body  > p > a img {
+    aspect-ratio: unset;
+}
+

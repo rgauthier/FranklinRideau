@@ -250,3 +250,8 @@ main .section.highlight {
   padding-bottom: 20px;
   margin: auto;
 }
+
+div p {
+  font-family: 'Birdseye', sans-serif;
+  font-size: 16px;
+}

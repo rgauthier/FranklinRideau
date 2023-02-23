@@ -24,9 +24,23 @@
         font-size: 18px;
         font-family: 'Birdseye', sans-serif;
         line-height: 1.75;
+        flex: auto;
+        width: 500px;
     }
 
     .columns > div > div:last-of-type {
-        text-align: center;
+        text-align: right;
+    }
+
+    .columns.columns-1-cols > div > div {
+        text-align: left;
+    }
+
+    .columns.columns-1-cols > div > div p:last-of-type {
+        text-align: right;
+    }
+
+    .columns.columns-1-cols > div > div p strong {
+        color: #4e1a88;
     }
 }
